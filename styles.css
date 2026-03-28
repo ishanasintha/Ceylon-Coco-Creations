@@ -1135,29 +1135,31 @@ ul { list-style: none; }
 /* ============================================================
    MOBILE NAV (hamburger open)
 ============================================================ */
-.nav-links.open {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(15,35,22,.97);
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  z-index: 99999;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
+@media (max-width: 768px) {
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15,35,22,.97);
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    z-index: 99999;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 
-.nav-links.open a {
-  font-size: 1.4rem;
-  font-family: var(--font-display);
-  font-weight: 300;
+  .nav-links.open a {
+    font-size: 1.4rem;
+    font-family: var(--font-display);
+    font-weight: 300;
+  }
 }
 
 .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
